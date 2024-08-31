@@ -181,6 +181,8 @@ section {
   font-style: normal;
   line-height: 1.66; /* 166.667% */
   margin-left: 38px;
+  margin-top: 38px;
+
 }
 .hero__image {
   display: flex;

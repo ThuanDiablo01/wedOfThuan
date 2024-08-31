@@ -1,0 +1,361 @@
+/* pc */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Tablet & mobile */
+@media (max-width: 991.98px) {
+  /* 1. An navbar */
+  .navbar {
+    display: none;
+  }
+  /*2. chuyen logo vao giua*/
+  .header-top {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  /* 3. Can lai vi tri icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
+  /* 4. overplay*/
+  .menu-overplay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    /* Cach le 4 goc */
+    inset: 0;
+    z-index: 1;
+    /* dieu kien binh thuong */
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* 5. Kiem tra menu checkbox duoc check thi hien overplay*/
+  .menu-checkbox:checked ~ .menu-overplay {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* 6. code cho menu nav */
+  .menu-drawer {
+    position: fixed;
+    background: #d683297f;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.25s;
+    padding: 60px;
+  }
+  /*7. Kiem tra menu neu dc check thi hien lai menu  */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8. menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+    transition: 0.5s;
+  }
+  .navbar__link:hover {
+    background-color: #ec912f7f;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .hero__info {
+    order: 2;
+    width: 80%;
+    margin: 22px auto;
+  }
+  .hero__media {
+    order: 1;
+  }
+  .hero__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .services__body {
+    flex-direction: column;
+  }
+  .services__img {
+    width: 100%;
+  }
+  .services__body--right {
+    margin-top: 20px;
+    width: 80%;
+  }
+  .services__body--right {
+    text-align: center;
+  }
+  .service__option {
+    width: 90%;
+  }
+  .services__desc {
+    text-align: start;
+  }
+  /* work list  */
+  .work__list {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+  .work__desc {
+    width: 90%;
+  }
+  /* about  */
+  .about__row {
+    flex-direction: column;
+    row-gap: 180px;
+  }
+  .about__heading-lv2 {
+    text-align: start;
+    width: 420px;
+  }
+  .about__info {
+    text-align: center;
+  }
+  .about__desc {
+    text-align: start;
+  }
+  /* team list */
+  .team__list-card {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  /* install */
+  .cta__phone,
+  .cta__media {
+    display: none;
+  }
+  .cta__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .blog__inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .blog__list {
+    margin-left: 0;
+  }
+  .appointment__inner {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  }
+  .footer-hidden-tablet {
+    display: none;
+  }
+  .show-on-mobile {
+    display: none;
+  }
+}
+/* Mobile */
+@media (max-width: 767.98px) {
+  .header__action {
+    display: none;
+  }
+  .menu-header__icon {
+    top: 16px;
+  }
+  .menu-drawer {
+    inset: 0 20% 0 0;
+    padding: 40px;
+  }
+  .navbar__item {
+    list-style-type: none;
+  }
+  .separate {
+    border-top: 2px solid #d8d6ed;
+  }
+  .hero__image--below {
+    display: none;
+  }
+  .hero__image--above {
+    width: 390px;
+    height: 240px;
+
+
+  }
+  .hero__headinglv1{
+    font-size: 3rem;
+  }
+  .hero__contact {
+    flex-direction: column;
+  }
+  .hero__number{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  /* service */
+  .services{
+    padding: 70px 0;
+  }
+  .services__text {
+        width: 93%;
+
+  }
+  .services__title {
+    width: 120%;
+    font-size: 1.5rem;
+
+  }
+  .services__desc {
+    width: 138%;
+    }
+
+  .ser__img{
+    padding: 0px 15px;
+    width: 390px;
+    height: auto;
+    border-radius: 30px;
+
+  }
+  .work__heading{
+    font-size: 4rem;
+  }
+  .work__icon {
+    width: 50px;
+    height: 50px;
+
+  }
+  .work__desc1 {
+    width: 400px;
+  }
+  .work__desc {
+    width: 120%;
+    font-size: 1.4rem;
+  }
+  .about {
+
+    margin: 0;
+    padding: 40px 0;
+
+  }
+  .about__row{
+    justify-content: center;
+  }
+  .about__img--top{ 
+  
+    width: 320px;
+    height: auto;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    order: 1;
+
+  }
+  .about__info {
+    font-size: 2.5rem;
+
+    width: 100%;
+    margin-top: 180px;  
+    z-index: 1;
+    order: 2;
+  }
+  .about__desc {
+    width: 403px;
+  }
+  .about__img--bot{
+    display: none;
+  }
+  .cta {
+    padding: 40px 0px;
+    margin: 40px 0px 25px;
+  
+  }
+  .cta__bg {
+  padding: 0;
+  }
+  .cta__heading-lv-2 {
+    font-size: 2.1rem;
+  }
+  .cta__desc {
+    font-size: 1.4rem;
+  }
+  .blog__inner {
+    margin: 45px 0px;
+    padding: 45px 0px;
+  }
+  .blog__heading-lv2 {
+    font-size: 3rem;
+  }
+  .blog__list {
+    flex-direction: column;
+  }
+  .appointment{
+    margin: 45px 0px;
+    padding: 45px 0px;
+  }
+  .appointment__inner {
+    margin: 45px 0px;
+    padding: 45px 0px;
+  }
+  .appointment__heading-lv1 {
+    width: 400px;
+    font-size: 3rem;
+  }
+  .appointment__desc {
+    width: 380px;
+    font-size: 1.2rem;
+  }
+  .footer {
+    margin-top: 50px;
+    padding-top: 50px;
+    
+  }
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+
+
+  }
+  .footer-form {
+    margin-bottom: 20px;
+  }
+}
+/* tam an khong lien quan */
+
